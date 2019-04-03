@@ -1,0 +1,60 @@
+<!--
+ * sinewave.html
+ * Created By: R. Alan Cooper
+ * Start Date: 3/22/19
+ * Last Modified: 4/2/19
+ * Notes:
+ *	[1] https://socket.io/docs/client-api/#IO
+ *	[2] https://stackoverflow.com/questions/11995406/socket-io-referenceerror-io-is-not-defined#answer-12160485
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Header / Tab Information -->
+	<meta http-equiv="Content-Type" content="text/html;" charset="utf-8">
+	<meta name="keywords" content="MIC,interview,homework,sinewave,graph">
+	<link rel="shortcut icon" href="https://michealthcare.com/wp-content/uploads/2019/02/favicon-png-32x32.png">
+	<link rel="stylesheet" href="template.css">
+	<title>Cooper | Sine Graph</title>
+<head>
+
+<body align = "center">
+	<!-- Graph Header -->
+	<div>
+		<header class = "font" id = "header_title">
+			SINE WAVE DISPLAY
+		</header>
+		<header class = "font" id = "header_output">
+			CURRENT VALUE:
+		</header>
+		<header class = "font" id = "header_value">
+
+		</header>
+	</div>
+
+	<!-- Graph Display -->
+	<div>
+		<canvas class = "canvas" id = "myCanvas" width = "800px" height = "200px"></canvas><br>
+	</div>
+
+	<!-- Buttons -->
+	<div>
+		<div id = "button_start">
+			<button class = "button" onclick = "start()">&#9658; Display</button>
+		</div>
+		<div id = "button_pause">
+			<button class = "button" onclick = "pause()">&#9616;&nbsp;&#9612; Pause Display</button>
+		</div>
+		<div id = "button_stop">
+			<button class = "button" onclick = "stop()"><span style="font-weight: bolder">&#10761;</span> Stop and Clear Display</button>
+		</div>
+	</div>
+</body>
+
+<script src="http://localhost:80/socket.io/socket.io.js"> // [1][2]
+</script>
+<script src="controller.js">
+</script>
+
+</html>
